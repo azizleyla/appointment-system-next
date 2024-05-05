@@ -1,33 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.MuiDrawer-root {
+    position: fixed;
+    top: 0;
+    max-height: 100%;
+    height: 100%;
+    transition: all .3s ease;
+    box-shadow: 0 0 3px #3c485826;
+    z-index: 1000;
+    width: 300px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+main {
+    background-color: #f8f9fa;
+    transition: all .3s ease;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+.mainLeft {
+    padding-left: 300px;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
