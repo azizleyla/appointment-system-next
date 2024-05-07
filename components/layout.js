@@ -1,12 +1,14 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import Sidebar from "./sidebar";
 import { Main } from "next/document";
 import { Box, Grid } from "@mui/material";
 import { Button } from "@mui/base";
 import Topbar from "./topbar";
 
+export const SidebarContext = createContext();
+
 const Layout = ({ children }) => {
-    const [isOpenSidebar, setIsOpenSidebar] = React.useState(true);
+    const [isOpenSidebar, setIsOpenSidebar] = useState(true);
 
     const handleToggle = (open) => (event) => {
         if (
@@ -19,22 +21,20 @@ const Layout = ({ children }) => {
 
         setIsOpenSidebar(open);
     };
+
     return (
-        <Box sx={{ height: "100vh" }}>
-            <Sidebar
-                setIsOpenSidebar={setIsOpenSidebar}
-                isOpenSidebar={isOpenSidebar}
-                toggleDrawer={handleToggle}
-            />
-            <main className={`${isOpenSidebar ? "mainLeft" : ''}`}>
-                <Topbar
-                    toggleDrawer={handleToggle}
-                    setIsOpenSidebar={setIsOpenSidebar}
-                    isOpenSidebar={isOpenSidebar}
-                />
-                {children}
-            </main>
-        </Box>
+        <SidebarContext.Provider
+            value={{ isOpenSidebar, setIsOpenSidebar, handleToggle }}
+        >
+            <Box sx={{ height: "100vh" }}>
+                <Sidebar />
+                <main className={`${isOpenSidebar ? "mainLeft" : ""}`}>
+                    <Topbar />
+                    {children}
+                </main>
+            </Box>
+        </SidebarContext.Provider>
+
     );
 };
 
