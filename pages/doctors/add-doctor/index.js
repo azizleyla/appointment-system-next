@@ -36,9 +36,11 @@ const AddDoctor = () => {
 		},
 	})
 
-
+	const onSubmit = (values) => {
+		console.log(values);
+	}
 	return (
-		<Box sx={{ padding: "94px 14px 24px" }}>
+		<Box>
 			<Typography component="h5" fontSize="1.2rem" fontWight="600">
 				Add New Doctor
 			</Typography>
@@ -46,7 +48,7 @@ const AddDoctor = () => {
 
 				<Grid item lg={8}>
 					<Box className={classes.formBox}>
-						<form>
+						<form onSubmit={handleSubmit(onSubmit)}>
 							<Grid spacing={3} container >
 								<Grid item md={6}>
 									<FormLabel className={classes.formLabel} >First Name</FormLabel>
@@ -95,7 +97,7 @@ const AddDoctor = () => {
 								</Grid>
 								<Grid item md={6}>
 									<FormLabel className={classes.formLabel} >Phone No.</FormLabel>
-									<Controller control={control} name="email"
+									<Controller control={control} name="phoneNumber"
 										render={({ field }) => <TextField placeholder='Phone no.:' sx={{
 											"& .MuiInputBase-input": {
 												fontSize: ".9375rem",
@@ -110,7 +112,7 @@ const AddDoctor = () => {
 								</Grid>
 								<Grid item md={6}>
 									<FormLabel className={classes.formLabel} >Departments</FormLabel>
-									<Controller control={control} name="email"
+									<Controller control={control} name="department"
 										render={({ field }) => <Select
 											{...field}
 											options={[
@@ -137,12 +139,12 @@ const AddDoctor = () => {
 								</Grid>
 								<Grid item md={12}>
 									<FormLabel className={classes.formLabel} >Bio</FormLabel>
-									<Controller control={control} name="gender"
+									<Controller control={control} name="bio"
 										render={({ field }) => <textarea className={classes.customTextarea} rows={5} name="Size" placeholder="Large" />}
 									/>
 								</Grid>
 							</Grid>
-							<Button sx={{ marginTop: "20px" }} variant="contained" color="primary">Add Doctor</Button>
+							<Button type="submit" sx={{ marginTop: "20px" }} variant="contained" color="primary">Add Doctor</Button>
 						</form>
 
 					</Box>

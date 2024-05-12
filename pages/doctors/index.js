@@ -15,7 +15,7 @@ import { useRouter } from "next/router";
 const Doctor = () => {
   const router = useRouter()
   return (
-    <Box sx={{ padding: "94px 14px 24px" }}>
+    <Box>
       <Stack
         display="flex"
         flexDirection="row"
