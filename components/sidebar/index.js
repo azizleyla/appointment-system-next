@@ -46,6 +46,7 @@ export default function SwipeableTemporaryDrawer() {
           const { children, title, icon } = item;
           return children?.length > 0 ? (
             <Accordion
+              key={index}
               sx={{
                 boxShadow: "none",
                 "&:before": {
@@ -138,6 +139,7 @@ export default function SwipeableTemporaryDrawer() {
               <AccordionDetails sx={{ padding: "5px 50px" }}>
                 {children.map((route) => (
                   <ListItemButton
+                    key={route}
                     selected={route.title == activeLink}
                     sx={{
                       padding: "5px 0px",
@@ -159,7 +161,6 @@ export default function SwipeableTemporaryDrawer() {
                         background: "#fff",
                       },
                     }}
-                    key={index}
                     onClick={() => handleNavigate(route)}
                     disablePadding
                   >

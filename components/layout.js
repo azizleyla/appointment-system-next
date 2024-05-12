@@ -2,7 +2,6 @@ import React, { createContext, useState } from "react";
 import Sidebar from "./sidebar";
 import { Main } from "next/document";
 import { Box, Grid } from "@mui/material";
-import { Button } from "@mui/base";
 import Topbar from "./topbar";
 
 export const SidebarContext = createContext();

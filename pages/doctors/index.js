@@ -33,6 +33,7 @@ const Doctor = () => {
         {doctorsData.map((doctor, index) => (
           <Grid lg={3} item>
             <Card
+              key={index}
               sx={{
                 borderRadius: "6px",
                 boxShadow: "0 0 3px #3c485826",

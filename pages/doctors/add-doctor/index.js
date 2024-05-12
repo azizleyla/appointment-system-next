@@ -153,8 +153,8 @@ const AddDoctor = () => {
 						<Typography variant='h5' fontSize="1.2rem" sx={{ padding: "10px 0" }}>Doctors List</Typography>
 						<Box sx={{ height: "100%", maxHeight: "500px" }}>
 							<List sx={{ padding: "20px 0", borderTop: "1px solid #e9ecef" }}>
-								{data.map((item) => (
-									<ListItem alignItems='flex-start' sx={{ padding: 0, marginBottom: "25px", gap: "15px" }}>
+								{data.map((item, index) => (
+									<ListItem key={index} alignItems='flex-start' sx={{ padding: 0, marginBottom: "25px", gap: "15px" }}>
 										<Box component='img' sx={{
 											width: "110px", boxShadow: "0 0 3px #3c485826 !important",
 											borderRadius: "10px",
