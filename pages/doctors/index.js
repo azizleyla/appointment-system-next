@@ -10,8 +10,10 @@ import {
   Typography,
 } from "@mui/material";
 import { doctorsData } from "./constant";
+import { useRouter } from "next/router";
 
 const Doctor = () => {
+  const router = useRouter()
   return (
     <Box sx={{ padding: "94px 14px 24px" }}>
       <Stack
@@ -23,7 +25,7 @@ const Doctor = () => {
 
           Doctors
         </Typography>
-        <Button color="primary" variant="contained">
+        <Button onClick={() => router.push('/doctors/add-doctor')} color="primary" variant="contained">
           Add New Doctor
         </Button>
       </Stack>

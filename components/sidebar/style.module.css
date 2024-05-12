@@ -1,0 +1,22 @@
+.accordionSummary {
+    margin: 0;
+}
+
+.accordionSummary .MuiAccordionSummary-content.Mui-expanded {
+    margin: 0;
+}
+
+.accordionSummary .MuiAccordionSummary-content {
+    margin: 0;
+}
+
+.imgContainer {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.listItemButton {
+    padding: 5px 0px;
+}

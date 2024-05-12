@@ -1,6 +1,9 @@
 import Layout from "@/components/layout";
+import "../components/sidebar/style.module.css";
+import "../pages/doctors/add-doctor/style.module.css"
+
 import "@/styles/globals.css";
-import { AppCacheProvider } from '@mui/material-nextjs/v13-pagesRouter';
+
 
 export default function App({ Component, pageProps }) {
   return (

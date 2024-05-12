@@ -6,18 +6,21 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 export const menuLinks = [
     {
         title: "Dashboard",
+        path: "/dashboard",
         icon: <DashboardIcon />
     },
     {
         title: "Appointment",
+        path: "/appointment",
         icon: <AccessAlarmsIcon />
     }, {
         title: "Doctors",
-        children: ['Add Doctor', 'Doctors'],
+        children: [{ title: "Add Doctor", path: "/doctors/add-doctor" }, { title: "Doctors", path: "/doctors" }],
         icon: <PersonOutlineIcon />
     },
     {
         title: "Patients",
+        path: "/patients",
         icon: <AccessibleIcon />
     }
 ]
