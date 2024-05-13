@@ -21,14 +21,9 @@
     display: block;
     font-size: 0.9rem;
 }
-
-
-
-
 .formControl {
     width: 100%;
 }
-
 .customTextarea {
     width: 100%;
     border: 1px solid #ced4da;
@@ -36,11 +31,4 @@
     font-weight: 400;
     line-height: 1.5;
 
-}
-
-.doctorsListContainer {
-    box-shadow: 0 0 3px #3c485826 !important;
-    border-radius: 0.375rem;
-    background-color: #fff;
-    padding: 1.5rem;
 }

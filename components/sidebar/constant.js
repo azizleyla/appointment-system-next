@@ -6,7 +6,7 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 export const menuLinks = [
     {
         title: "Dashboard",
-        path: "/dashboard",
+        path: "/",
         icon: <DashboardIcon />
     },
     {
