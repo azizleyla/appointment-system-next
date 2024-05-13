@@ -24,7 +24,7 @@ const Breadcrumb = () => {
                     underline="hover"
                     key="2"
                     color="inherit"
-                    href="/material-ui/getting-started/installation/"
+                    href={path}
                 >
                     {path}
                 </Link>
