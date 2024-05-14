@@ -1,4 +1,5 @@
-import { Breadcrumbs, Link } from "@mui/material";
+import { Breadcrumbs } from "@mui/material";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useMemo } from "react";
 
@@ -14,16 +15,14 @@ const Breadcrumb = () => {
       separator="›"
       aria-label="breadcrumb"
     >
-      <Link underline="hover" key="1" color="inherit" href="/">
+      <Link href="/">
         Dashboard
       </Link>
       {pathnameArray.map((path) => (
         <Link
-          sx={{ textTransform: "capitalize", color: "#396cf0" }}
-          underline="hover"
+          style={{ textTransform: "capitalize", color: "#396cf0" }}
           key="2"
-          color="inherit"
-          href={path}
+          href={`/${path}`}
         >
           {path}
         </Link>

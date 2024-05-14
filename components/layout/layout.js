@@ -1,8 +1,8 @@
 import React, { createContext, useState } from "react";
-import Sidebar from "./sidebar";
+import Sidebar from "../sidebar";
 import { Box } from "@mui/material";
-import Topbar from "./topbar";
-import Breadcrumb from "./shared/breadcrumb";
+import Topbar from "../topbar";
+import Breadcrumb from "../shared/breadcrumb";
 
 export const SidebarContext = createContext();
 

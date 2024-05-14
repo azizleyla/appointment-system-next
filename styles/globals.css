@@ -22,3 +22,7 @@ main {
 .MuiFormControl-root {
     width: 100%;
 }
+
+body {
+    background-color: #f8f9fa;
+}

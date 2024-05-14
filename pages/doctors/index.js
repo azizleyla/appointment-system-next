@@ -48,7 +48,7 @@ const Doctor = () => {
                 },
               }}
             >
-              <Box>
+              <Box display="flex" alignItems="center" justifyContent="center">
                 <Image height={163} width={163} src={doctor.photo} />
               </Box>
               <CardContent

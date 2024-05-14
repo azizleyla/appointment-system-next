@@ -1,7 +1,7 @@
 import { Box, Breadcrumbs, Button, Link, Typography } from "@mui/material";
 import React, { useContext } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import { SidebarContext } from "../layout";
+import { SidebarContext } from "../layout/layout";
 
 const Topbar = () => {
   let { isOpenSidebar, handleToggle } = useContext(SidebarContext);
