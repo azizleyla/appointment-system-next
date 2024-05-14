@@ -49,7 +49,9 @@ const Doctor = () => {
               }}
             >
               <Box display="flex" alignItems="center" justifyContent="center">
-                <Image height={163} width={163} src={doctor.photo} />
+                <Image width={0} sizes="100vw"
+
+                  height={300} style={{ width: "100%", height: "auto" }} src={doctor.photo} />
               </Box>
               <CardContent
                 sx={{
