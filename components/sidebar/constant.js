@@ -7,20 +7,20 @@ export const menuLinks = [
     {
         title: "Dashboard",
         path: "/",
-        icon: <DashboardIcon />
+        icon: DashboardIcon
     },
     {
         title: "Appointment",
         path: "/appointment",
-        icon: <AccessAlarmsIcon />
+        icon: AccessAlarmsIcon 
     }, {
         title: "Doctors",
         children: [{ title: "Add Doctor", path: "/doctors/add-doctor" }, { title: "Doctors", path: "/doctors" }],
-        icon: <PersonOutlineIcon />
+        icon: PersonOutlineIcon 
     },
     {
         title: "Patients",
         path: "/patients",
-        icon: <AccessibleIcon />
+        icon: AccessibleIcon
     }
 ]

@@ -46,7 +46,7 @@ export default function SwipeableTemporaryDrawer() {
       </Box>
       <List sx={{ borderTop: "1px solid #e9ecef" }}>
         {menuLinks.map((item, index) => {
-          const { children, title, icon, path } = item;
+          const { children, title, icon: Icon, path } = item;
           return children?.length > 0 ? (
             <Accordion
               key={index}
@@ -124,7 +124,7 @@ export default function SwipeableTemporaryDrawer() {
                         },
                       }}
                     >
-                      {icon}
+                      {<Icon />}
                     </ListItemIcon>
                     <ListItemText
                       sx={{
@@ -229,7 +229,7 @@ export default function SwipeableTemporaryDrawer() {
                   },
                 }}
               >
-                {icon}
+                {<Icon />}
               </ListItemIcon>
               <ListItemText
                 sx={{
